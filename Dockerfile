@@ -4,12 +4,12 @@ FROM openjdk:8-alpine
 ENV SOFT		bitbucket
 #ENV SOFTSUB		core
 ENV OPENJDKV		8
-ENV JIRA_VERSION	6.0.1
-ENV JIRA_HOME		/var/atlassian/${SOFT}
-ENV JIRA_INSTALL	/opt/atlassian/${SOFT}
-ENV SOFT_HOME		${JIRA_HOME}
-ENV SOFT_INSTALL	${JIRA_INSTALL}
-ENV SOFT_VERSION	${JIRA_VERSION}
+ENV BITBUCKET_VERSION	6.0.1
+ENV BITBUCKET_HOME	/var/atlassian/${SOFT}
+ENV BITBUCKET_INSTALL	/opt/atlassian/${SOFT}
+ENV SOFT_HOME		${BITBUCKET_HOME}
+ENV SOFT_INSTALL	${BITBUCKET_INSTALL}
+ENV SOFT_VERSION	${BITBUCKET_VERSION}
 
 # download option
 RUN apk add --no-cache wget bash && cd / && wget --no-check-certificate https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/option.sh && \
