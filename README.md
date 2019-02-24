@@ -5,7 +5,7 @@
 
 To quickly get started running a BitBucket instance, use the following command:
 ```bash
-docker run --detach --publish 7990:7990 babim/bitbucket:latest
+docker run --detach --publish 7990:7990 babim/bitbucket:fixed
 ```
 ```
 volume:
