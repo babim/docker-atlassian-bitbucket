@@ -4,7 +4,7 @@ FROM openjdk:8-alpine
 ENV SOFT		bitbucket
 #ENV SOFTSUB		core
 ENV OPENJDKV		8
-ENV BITBUCKET_VERSION	7.0.1
+ENV BITBUCKET_VERSION	7.1.2
 ENV BITBUCKET_HOME	/var/atlassian/${SOFT}
 ENV BITBUCKET_INSTALL	/opt/atlassian/${SOFT}
 ENV SOFT_HOME		${BITBUCKET_HOME}
@@ -12,7 +12,7 @@ ENV SOFT_INSTALL	${BITBUCKET_INSTALL}
 ENV SOFT_VERSION	${BITBUCKET_VERSION}
 
 # download option
-RUN apk add --no-cache curl bash && \
+RUN apt-get update && apt-get install curl bash && \
 	curl -s https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/option.sh -o /option.sh && \
 	chmod 755 /option.sh
 
