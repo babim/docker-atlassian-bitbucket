@@ -1,9 +1,9 @@
-FROM openjdk:8-alpine
+FROM adoptopenjdk/openjdk11:alpine
 
 # Configuration variables.
 ENV SOFT		bitbucket
 #ENV SOFTSUB		core
-ENV OPENJDKV		8
+ENV OPENJDKV		11
 ENV BITBUCKET_VERSION	7.1.1
 ENV BITBUCKET_HOME	/var/atlassian/${SOFT}
 ENV BITBUCKET_INSTALL	/opt/atlassian/${SOFT}
