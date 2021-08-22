@@ -3,7 +3,7 @@ FROM adoptopenjdk/openjdk11:debian-slim
 # Configuration variables.
 ENV SOFT		bitbucket
 #ENV SOFTSUB		core
-ENV OPENJDKV		11
+ENV OPENJDKV		8
 ENV BITBUCKET_VERSION	7.14.1
 ENV BITBUCKET_HOME	/var/atlassian/${SOFT}
 ENV BITBUCKET_INSTALL	/opt/atlassian/${SOFT}
