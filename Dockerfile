@@ -1,15 +1,15 @@
-FROM adoptopenjdk/openjdk11:debian-slim
+FROM eclipse-temurin:17-noble
 
 # Configuration variables.
-ENV SOFT		bitbucket
-#ENV SOFTSUB		core
-ENV OPENJDKV		11
-ENV BITBUCKET_VERSION	8.5.1
-ENV BITBUCKET_HOME	/var/atlassian/${SOFT}
+ENV SOFT				bitbucket
+#ENV SOFTSUB			core
+ENV OPENJDKV			17
+ENV BITBUCKET_VERSION	9.0.1
+ENV BITBUCKET_HOME		/var/atlassian/${SOFT}
 ENV BITBUCKET_INSTALL	/opt/atlassian/${SOFT}
-ENV SOFT_HOME		${BITBUCKET_HOME}
-ENV SOFT_INSTALL	${BITBUCKET_INSTALL}
-ENV SOFT_VERSION	${BITBUCKET_VERSION}
+ENV SOFT_HOME			${BITBUCKET_HOME}
+ENV SOFT_INSTALL		${BITBUCKET_INSTALL}
+ENV SOFT_VERSION		${BITBUCKET_VERSION}
 
 # download option
 RUN apt-get update && apt-get install curl bash && \
