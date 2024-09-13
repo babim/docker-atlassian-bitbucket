@@ -1,10 +1,10 @@
-FROM adoptopenjdk/openjdk8:alpine
+FROM eclipse-temurin:17-alpine
 
 # Configuration variables.
 ENV SOFT				bitbucket
 #ENV SOFTSUB			core
-ENV OPENJDKV			8
-ENV BITBUCKET_VERSION	8.7.5
+ENV OPENJDKV			17
+ENV BITBUCKET_VERSION	8.8.8
 ENV BITBUCKET_HOME		/var/atlassian/${SOFT}
 ENV BITBUCKET_INSTALL	/opt/atlassian/${SOFT}
 ENV SOFT_HOME			${BITBUCKET_HOME}
